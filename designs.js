@@ -14,8 +14,12 @@ function makeGrid() {
         let gridRow = document.createElement('tr');
         for (let b = 0; b < widthInput; b++) {
             let gridColumn = document.createElement('td');
+            gridColumn.appendChild(document.createTextNode(''));
+            gridRow.appendChild(gridColumn);
         }
+        gridArea.appendChild(gridRow);
     }
+    myGrid.appendChild(gridArea);
 }
 
 // When size is submitted by the user, call makeGrid()
